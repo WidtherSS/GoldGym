@@ -4,7 +4,7 @@ import { Box, Stack, Typography } from '@mui/material';
 import HeroBannerVideo from '../assets/images/banner.mp4';
 
 const HeroBanner = () => (
-  <Box sx={{ mt: { lg: '212px', xs: '70px' }, ml: { sm: '50px' } }} position="relative" p="20px">
+  <Box sx={{ mt: { lg: '212px', xs: '70px' }, ml: { sm: '50px' } }} position="relative">
     <Typography color="#FF2625" fontWeight="600" fontSize="26px">Fitness Club</Typography>
     <Typography fontWeight={700} sx={{ fontSize: { lg: '44px', xs: '40px' } }} mb="23px" mt="30px">
       Sweat, Smile <br />
@@ -19,7 +19,17 @@ const HeroBanner = () => (
     <Typography fontWeight={600} color="#FF2625" sx={{ opacity: '0.1', display: { lg: 'block', xs: 'none' }, fontSize: '200px' }}>
       Exercise
     </Typography>
-    <video src={HeroBannerVideo} alt="hero-banner" className="hero-banner-img" autoPlay loop muted />
+    <video src={HeroBannerVideo} alt="hero-banner" className="hero-banner-img" autoPlay loop muted style={{
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: -1,
+  }}
+/>
+
   </Box>
 );
 
